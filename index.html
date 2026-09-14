@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#0b1730">
+<meta name="description" content="Track Workout — your daily track & field offseason training plan.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Track Workout">
+<meta name="application-name" content="Track Workout">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon-180.png">
+<link rel="stylesheet" href="styles.css">
+<title>Track Workout</title>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" aria-label="Primary">
+    <div class="sideBrand"><span class="sideLogo" aria-hidden="true"><svg viewBox="0 0 64 64" width="36" height="36"><rect width="64" height="64" rx="16" fill="#0b1730"/><path d="M14 44c10 0 12-10 20-10s10 10 16 10" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/><path d="M14 30c10 0 12-10 20-10s10 10 16 10" fill="none" stroke="#38bdf8" stroke-width="5" stroke-linecap="round"/></svg></span><div><b>Track Workout</b><small>Offseason 2026–27</small></div></div>
+    <nav class="sideNav">
+      <button class="navbtn active" data-screen="today"><span class="ico">🏠</span><span>Today</span></button>
+      <button class="navbtn" data-screen="plan"><span class="ico">📅</span><span>Plan</span></button>
+      <button class="navbtn" data-screen="progress"><span class="ico">📈</span><span>Progress</span></button>
+      <button class="navbtn" data-screen="history"><span class="ico">📝</span><span>History</span></button>
+      <button class="navbtn" data-screen="settings"><span class="ico">⚙️</span><span>Settings</span></button>
+    </nav>
+  </aside>
+
+  <div class="mainCol">
+    <header class="topbar">
+      <div class="brand"><span class="logo" aria-hidden="true"><svg viewBox="0 0 64 64" width="30" height="30"><rect width="64" height="64" rx="16" fill="#0b1730"/><path d="M14 44c10 0 12-10 20-10s10 10 16 10" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/><path d="M14 30c10 0 12-10 20-10s10 10 16 10" fill="none" stroke="#38bdf8" stroke-width="5" stroke-linecap="round"/></svg></span><span class="appname">Track Workout</span></div>
+      <div class="topActions"><button class="iconbtn light" id="installBtn" hidden aria-label="Install app">＋</button><button class="iconbtn light navbtn" data-screen="settings" aria-label="Settings">⚙︎</button></div>
+    </header>
+
+    <main id="main">
+      <section id="screen-today" class="screen active" aria-label="Today"></section>
+      <section id="screen-workout" class="screen" aria-label="Workout"></section>
+      <section id="screen-plan" class="screen" aria-label="Plan"></section>
+      <section id="screen-progress" class="screen" aria-label="Progress"></section>
+      <section id="screen-history" class="screen" aria-label="History"></section>
+      <section id="screen-settings" class="screen" aria-label="Settings"></section>
+    </main>
+  </div>
+
+  <nav class="nav" aria-label="Primary">
+    <button class="navbtn active" data-screen="today"><span class="ico">🏠</span><span>Today</span></button>
+    <button class="navbtn" data-screen="plan"><span class="ico">📅</span><span>Plan</span></button>
+    <button class="navbtn" data-screen="progress"><span class="ico">📈</span><span>Progress</span></button>
+    <button class="navbtn" data-screen="history"><span class="ico">📝</span><span>History</span></button>
+  </nav>
+</div>
+
+<script src="workouts.js"></script>
+<script src="plan-meta.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/store.js"></script>
+<script src="js/parser.js"></script>
+<script src="js/plan.js"></script>
+<script src="js/timer.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
